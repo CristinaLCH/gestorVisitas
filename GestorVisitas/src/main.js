@@ -14,7 +14,7 @@ window.onload = function () {
 
     paises.forEach(element => {
         option = creaNodo(element.id, option, element.nombre);
-        insertaNodo(countryList,option)
+        insertaNodo(countryList,option);
         
     });
 
