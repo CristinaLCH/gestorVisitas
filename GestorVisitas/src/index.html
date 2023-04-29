@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script  src='./main.js' type='module'></script>
+
+    <script type='application/json' src="./files/jsons/paises.json"></script>
+    <script type='application/json' src="./files/jsons/provincias.json"></script>
+
+
+    <title>Gestor de Visitas</title>
+</head>
+
+<body>
+    <header>
+        <img src="/GestorVisitas/src/files/Simbolo/Simbolo-JuntaAndalucia-ppal.png" />
+        <div>
+            <h2>Gestor de Visitas</h2>
+            <h4>Conjunto Arqueológico Dólmenes de Antequera</h4>
+        </div>
+    </header>
+
+    <section>
+        <div class="border">
+            <div class="title"><span>Registro de visitantes</span></div>
+            <form class="form">
+
+                <input id="date" name="date" readonly />
+
+                <fieldset>
+                    <span>Paises</span>
+                    <input list="contry" name="contry" class="input" />
+                    <datalist id="contry">
+                        <!-- opciones -->
+                    </datalist>
+                </fieldset>
+
+                <fieldset>
+                    <span>Código postal</span>
+                    <input list="cps" name="cp" class="input" />
+                    <datalist id="cps">
+                        <option value="29200">Antequera</option>
+                        <!-- opciones -->
+                    </datalist>
+                </fieldset>
+
+                <fieldset>
+                    <span>Grupo</span>
+                    <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Individual</span>
+                </fieldset>
+
+                <fieldset></fieldset>
+
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
+

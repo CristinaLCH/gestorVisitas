@@ -1,0 +1,150 @@
+:root {
+  --dgreen: #077932;
+  --lgreen: #368f3f;
+  --lgray: #9b9b9a;
+  --dgray: #575756;
+  --black: #2e2925;
+}
+
+@font-face {
+  font-family: NotoTitle;
+  src: url("/GestorVisitas/src/files/Tipografías/NotoSansHK/NotoSansHK-Medium.otf");
+}
+@font-face {
+  font-family: NotoText;
+  src: url("/GestorVisitas/src/files/Tipografías/NotoSansHK/NotoSansHK-Regular.otf");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: NotoText;
+}
+
+/* CABECERA */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-family: NotoTitle;
+  margin: 3rem;
+}
+
+header > img {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 2rem;
+}
+
+.title {
+  color: var(--dgray);
+  border-bottom: 2px solid var(--dgray);
+}
+
+
+/* CUERPO */
+section {
+    margin: 3rem;
+    /*display: flex;
+    align-items: center;
+    justify-content: initial;*/
+}
+
+.title {
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+.title > span {
+    margin-left: 2rem;
+    font-size: large;
+    font-family: NotoTitle;
+}
+
+.border {
+  border: solid 1px var(--lgray);
+}
+
+.form{
+    padding: 2rem;
+}
+
+input {
+  border-radius: 5px;
+  border: solid 2px var(--lgreen);
+  height: 1.5rem;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* swich */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dgray);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--dgreen);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--lgreen);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
