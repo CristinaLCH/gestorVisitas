@@ -18,7 +18,6 @@ window.onload = function () {
         
     });
 
-    git config --global user.email "email@youremail.com"
 
 }
 
