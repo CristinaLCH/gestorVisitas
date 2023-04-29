@@ -9,33 +9,32 @@ let provincias = await responseProvincias.json();
 
 window.onload = function () {
 
-    //Cargamos los inputs
-    var countryList = document.getElementById("contry");
+    //  DATE
+    /*date = new Date();
+
+    d = date.getDate();
+    m = date.getMonth() + 1;
+    y = date.getFullYear();
+
+document.getElementById("date").value = new Date(y, m, d);*/
+
+    // COUNTRY 
+    var countryList = document.getElementById("countryList");
 
     paises.forEach(element => {
-        option = creaNodo(element.id, option, element.nombre);
+        let option = creaNodo(element.id, "option");
+        option.value = element.nombre;
         insertaNodo(countryList,option);
         
     });
 
+    document.getElementById("country").value = "ESPAÑA";
+
+    
+
 
 }
 
-/*
-
-document.getElementById("contry").value = "ESPAÑA";
-debugger
-
-date = new Date();
-
-d = date.getDate();
-m = date.getMonth() + 1; // take care of the month's number here ⚠️
-y = date.getFullYear();
-
-
-document.getElementById("date").value = new Date(y, m, d);
-
-*/
 
 
 /**Posicion en la que se va a insertar el elemento creado, devuelve el nodo creado */
